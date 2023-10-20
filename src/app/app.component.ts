@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SibeBar';
+
+ show:boolean=true;
+ constructor(private rout:Router){}
+ userLogin:boolean=false;
+ getHome(){
+  this.rout.navigate(['/home'])
+  this.userLogin=true;
+  this.show= false;
+
+ }
 }

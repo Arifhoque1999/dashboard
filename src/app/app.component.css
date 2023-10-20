@@ -1,0 +1,26 @@
+.d-flex {
+    display: flex !important;
+}
+
+::ng-deep mat-sidenav-container {
+   background-color: aliceblue;
+}
+
+::ng-deep mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Define a class to hide elements on mobile screens */
+.hide-on-mobile {
+    display: block;
+    /* Default display */
+}
+
+/* Use a media query to hide elements on screens with a maximum width of 768px (adjust as needed for your mobile breakpoint) */
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none;
+        /* Hide the element on mobile screens */
+    }
+}
